@@ -1,0 +1,67 @@
+'''
+Competitors1 = ["","","","",""]
+Competitors2 = ["","","","",""]
+Competitors3 = ["","","","",""]
+Competitors4 = ["","","","",""]
+Competitors5 = ["","","","",""]
+
+for x in range(5):
+  Competitors1[x] = random.randint(0,1000)
+for x in range(5):
+  Competitors2[x] = random.randint(0,1000)
+for x in range(5):
+  Competitors3[x] = random.randint(0,1000)
+for x in range(5):
+  Competitors4[x] = random.randint(0,1000)
+for x in range(5):
+  Competitors5[x] = random.randint(0,1000)
+
+print("Here we have the contestants:")
+print("Competitors 1:")
+print(Competitors1)
+print("Competitors 2:")
+print(Competitors2)
+print("Competitors 3:")
+print(Competitors3)
+print("Competitors 4:")
+print(Competitors4)
+print("Competitors 5:")
+print(Competitors5)
+
+#RACE 1, 2, 3, 4 AND 5
+print("Group sort from slower to faster:")
+print("RACE 1:")
+Competitors1.sort()
+print(Competitors1)
+print("RACE 2:")
+Competitors2.sort()
+print(Competitors2)
+print("RACE 3:")
+Competitors3.sort()
+print(Competitors3)
+print("RACE 4:")
+Competitors4.sort()
+print(Competitors4)
+print("RACE 5:")
+Competitors5.sort()
+print(Competitors5)
+
+CompetitorsT5 = [Competitors5[4],Competitors4[4],Competitors3[4],Competitors2[4],Competitors1[4]]
+maxVal1 = 0
+maxVal2 = 0
+cont = 0
+while cont < 5:
+  if (CompetitorsT5[cont] > maxVal1):
+    maxVal1 = CompetitorsT5[cont]
+    indexT5= cont
+  cont=cont+1
+
+cont = 0
+while cont < 5:
+  if ((CompetitorsT5[cont] > maxVal2)&(CompetitorsT5[cont] != maxVal1)):
+    maxVal2 = CompetitorsT5[cont]
+    indexT52= cont
+  cont=cont+1
+
+print(maxVal1, maxVal2)
+'''
