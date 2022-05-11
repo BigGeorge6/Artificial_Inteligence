@@ -75,7 +75,7 @@ HorseNode.printNode()
 
 HorsesArray = ["", "", "", "", "", "", "", "","", "", "", "", "", "", "", "","", "", "", "", "", "", "", "",""]
 
-for x in range(24):
+for x in range(25):
   searchHorse=HorseNode.Search(MatrixtoArray[x]) 
   HorsesArray[x] = searchHorse.Name
   print(HorsesArray[x])
@@ -199,12 +199,12 @@ PointsH = {HorsesArray[24]: puntoA, HorsesArray[23]: puntoB, HorsesArray[22]: pu
           HorsesArray[9]: puntoP, HorsesArray[8]: puntoQ, HorsesArray[7]: puntoR, HorsesArray[6]: puntoS, HorsesArray[5]: puntoT, 
           HorsesArray[4]: puntoU, HorsesArray[3]: puntoV, HorsesArray[2]: puntoY, HorsesArray[1]: puntoX, HorsesArray[0]: puntoZ}
 
-cont: int = 0
+cont = 0
 for i in edges_G:
     Pa = PointsH[edges_G[cont][0]]
     Pb = PointsH[edges_G[cont][1]]
     G.edges[i]['distance'] = DistCalc(Pa, Pb)*100
     print('The distance between', edges_G[cont], G.edges[i],'[units]')
-    cont = cont + 1
+    cont+=1
 nx.draw(G, pos=locate, node_color='gray', with_labels=True)
 plt.show()
